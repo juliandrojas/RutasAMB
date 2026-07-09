@@ -380,7 +380,7 @@ class _SuggestionTile extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Row(
           children: [
-            Icon(Icons.search, color: cs.onSurface.withOpacity(0.5), size: 22),
+            Icon(Icons.search, color: cs.onSurface.withValues(alpha: 0.5), size: 22),
             const SizedBox(width: 16),
             Expanded(
               child: Text(
@@ -394,7 +394,7 @@ class _SuggestionTile extends StatelessWidget {
             ),
             Icon(
               Icons.north_west,
-              color: cs.onSurface.withOpacity(0.4),
+              color: cs.onSurface.withValues(alpha: 0.4),
               size: 18,
             ),
           ],
