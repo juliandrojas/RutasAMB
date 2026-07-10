@@ -57,7 +57,7 @@ final routeResultsProvider =
         originLng: params.originLng,
         destinationLat: params.destinationLat,
         destinationLng: params.destinationLng,
-        radiusMeters: 1500, // <--- AÑADE ESTA LÍNEA
+        radiusMeters: 4000, // radio amplio para cubrir datos mock
       );
     });
 

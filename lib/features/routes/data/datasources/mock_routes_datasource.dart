@@ -51,18 +51,28 @@ class MockRoutesDatasource implements RoutesDatasource {
       name: 'Ruta P8 - Colorados - UIS - Centro',
       company: 'Unitransa',
       textualRoute:
-          'Sale de Colorados, baja por la Cra 27, pasa por la UIS, baja por la Quebradaseca al Centro y retorna.',
+          'Sale de Colorados, baja por la Cra 27, pasa por la UIS, sigue por Quebradaseca hasta el Centro y retorna.',
       frequency: 'Cada 8 min',
       schedule: '04:30 AM - 09:45 PM',
       lengthKm: 15.2,
-      neighborhoods: ['Colorados', 'UIS', 'Centro', 'San Francisco'],
-      color: '#E65100', // Naranja
+      neighborhoods: [
+        'Colorados',
+        'Ciudadela Real de Minas',
+        'Sotomayor',
+        'UIS',
+        'Centro',
+        'San Francisco',
+      ],
+      color: '#E65100',
       coordinates: [
         LatLngEntity(lat: 7.1550, lng: -73.1300), // Colorados
-        LatLngEntity(lat: 7.1450, lng: -73.1250), // Intermedia
+        LatLngEntity(lat: 7.1480, lng: -73.1275), // Ciudadela Real de Minas
+        LatLngEntity(lat: 7.1420, lng: -73.1260), // Sotomayor
+        LatLngEntity(lat: 7.1380, lng: -73.1245), // Hospital Ramón González
         LatLngEntity(lat: 7.1350, lng: -73.1220), // UIS
-        LatLngEntity(lat: 7.1250, lng: -73.1250), // Centro (Parque Santander)
-        LatLngEntity(lat: 7.1150, lng: -73.1200), // Sur
+        LatLngEntity(lat: 7.1300, lng: -73.1230), // Quebradaseca
+        LatLngEntity(lat: 7.1250, lng: -73.1250), // Parque Santander
+        LatLngEntity(lat: 7.1198, lng: -73.1227), // Gobernación
       ],
       stops: [
         StopEntity(
@@ -70,43 +80,92 @@ class MockRoutesDatasource implements RoutesDatasource {
           name: 'Despacho Colorados',
           lat: 7.1550,
           lng: -73.1300,
-          address: 'Colorados Norte',
+          address: 'Colorados Norte, Bucaramanga',
         ),
         StopEntity(
           id: 'u2',
-          name: 'Entrada UIS',
-          lat: 7.1350,
-          lng: -73.1220,
-          address: 'Carrera 27 # 9',
+          name: 'Ciudadela Real de Minas',
+          lat: 7.1480,
+          lng: -73.1275,
+          address: 'Calle 60 Norte',
         ),
         StopEntity(
           id: 'u3',
+          name: 'Sotomayor',
+          lat: 7.1420,
+          lng: -73.1260,
+          address: 'Av. Sotomayor con Cra. 27',
+        ),
+        StopEntity(
+          id: 'u4',
+          name: 'Hospital Ramón González',
+          lat: 7.1380,
+          lng: -73.1245,
+          address: 'Cra. 28 con Clle 45',
+        ),
+        StopEntity(
+          id: 'u5',
+          name: 'UIS – Entrada principal',
+          lat: 7.1350,
+          lng: -73.1220,
+          address: 'Carrera 27 # 9, Ciudad Universitaria',
+        ),
+        StopEntity(
+          id: 'u6',
+          name: 'Quebradaseca',
+          lat: 7.1300,
+          lng: -73.1230,
+          address: 'Av. Quebradaseca',
+        ),
+        StopEntity(
+          id: 'u7',
           name: 'Parque Santander',
           lat: 7.1250,
           lng: -73.1250,
-          address: 'Calle 36 # 25',
+          address: 'Calle 36 # 25, Centro',
+        ),
+        StopEntity(
+          id: 'u8',
+          name: 'Gobernación de Santander',
+          lat: 7.1198,
+          lng: -73.1227,
+          address: 'Cra. 26 Clle 37, Centro',
         ),
       ],
     ),
 
-    // ── RUTA LIM: Limoncito – Cabecera – Centro ──────────────────────
+    // ── RUTA LIM: Limoncito – Autopista – Cabecera – Centro ──────────
     RouteEntity(
       id: 'ruta_transcolombia_limoncito',
       code: 'LIM',
-      name: 'Ruta Limoncito - Cabecera - Centro',
+      name: 'Limoncito – Autopista – Cabecera – Centro',
       company: 'Transcolombia',
       textualRoute:
-          'Floridablanca Limoncito, Autopista, Cabecera, Carrera 33, Centro.',
+          'Sale de Limoncito (Floridablanca), sube por la Autopista Floridablanca-Bucaramanga, '
+          'pasa por C.C. Cañaveral, Lagos del Cacique, Cabecera del Llano, '
+          'Cuarta Etapa (Cra. 33) y llega al Centro.',
       frequency: 'Cada 15 min',
       schedule: '05:00 AM - 09:00 PM',
-      lengthKm: 12.0,
-      neighborhoods: ['Limoncito', 'Cabecera', 'Centro'],
-      color: '#1565C0', // Azul oscuro
+      lengthKm: 18.5,
+      neighborhoods: [
+        'Limoncito',
+        'Floridablanca',
+        'Cañaveral',
+        'Lagos del Cacique',
+        'Cabecera del Llano',
+        'Centro Bucaramanga',
+      ],
+      color: '#1565C0',
       coordinates: [
         LatLngEntity(lat: 7.0700, lng: -73.1000), // Limoncito
-        LatLngEntity(lat: 7.0900, lng: -73.1100), // Autopista
-        LatLngEntity(lat: 7.1150, lng: -73.1120), // Cabecera
-        LatLngEntity(lat: 7.1250, lng: -73.1250), // Centro
+        LatLngEntity(lat: 7.0750, lng: -73.0950), // C.C. Cañaveral
+        LatLngEntity(lat: 7.0830, lng: -73.1000), // Autopista km 4
+        LatLngEntity(lat: 7.0885, lng: -73.1097), // Lagos del Cacique
+        LatLngEntity(lat: 7.0950, lng: -73.1120), // Av. El Jardín
+        LatLngEntity(lat: 7.1079, lng: -73.1158), // Cabecera del Llano
+        LatLngEntity(lat: 7.1150, lng: -73.1120), // Cuarta Etapa Cra. 33
+        LatLngEntity(lat: 7.1198, lng: -73.1227), // Gobernación
+        LatLngEntity(lat: 7.1250, lng: -73.1250), // Parque Santander
       ],
       stops: [
         StopEntity(
@@ -114,65 +173,154 @@ class MockRoutesDatasource implements RoutesDatasource {
           name: 'Barrio Limoncito',
           lat: 7.0700,
           lng: -73.1000,
-          address: 'Floridablanca Sur',
+          address: 'Calle 12 Sur, Floridablanca',
         ),
         StopEntity(
           id: 'tc2',
-          name: 'Cuarta Etapa',
-          lat: 7.1150,
-          lng: -73.1120,
-          address: 'Carrera 33 # 48',
+          name: 'C.C. Cañaveral',
+          lat: 7.0750,
+          lng: -73.0950,
+          address: 'Autopista Floridablanca km 2',
         ),
         StopEntity(
           id: 'tc3',
-          name: 'Centro',
+          name: 'Autopista – Km 4',
+          lat: 7.0830,
+          lng: -73.1000,
+          address: 'Autopista Floridablanca-Bucaramanga km 4',
+        ),
+        StopEntity(
+          id: 'tc4',
+          name: 'C.C. Lagos del Cacique',
+          lat: 7.0885,
+          lng: -73.1097,
+          address: 'Autopista km 7',
+        ),
+        StopEntity(
+          id: 'tc5',
+          name: 'Av. El Jardín',
+          lat: 7.0950,
+          lng: -73.1120,
+          address: 'Av. El Jardín con Cra. 22',
+        ),
+        StopEntity(
+          id: 'tc6',
+          name: 'Cabecera del Llano',
+          lat: 7.1079,
+          lng: -73.1158,
+          address: 'C.C. Cabecera, Bucaramanga',
+        ),
+        StopEntity(
+          id: 'tc7',
+          name: 'Cuarta Etapa – Cra. 33',
+          lat: 7.1150,
+          lng: -73.1120,
+          address: 'Carrera 33 # 48, Bucaramanga',
+        ),
+        StopEntity(
+          id: 'tc8',
+          name: 'Gobernación de Santander',
+          lat: 7.1198,
+          lng: -73.1227,
+          address: 'Cra. 26 Clle 37, Centro',
+        ),
+        StopEntity(
+          id: 'tc9',
+          name: 'Parque Santander',
           lat: 7.1250,
           lng: -73.1250,
-          address: 'Calle 36',
+          address: 'Centro Histórico, Bucaramanga',
         ),
       ],
     ),
 
-    // ── RUTA IQU: Iquique – Provenza – Centro ────────────────────────
+    // ── RUTA IQU: Iquique – Diamante – Provenza – Centro ────────────
     RouteEntity(
       id: 'ruta_cotrander_iquique',
       code: 'IQU',
-      name: 'Ruta Iquique - Provenza - Centro',
+      name: 'Iquique – Diamante – Provenza – Centro',
       company: 'Cotrander',
       textualRoute:
-          'Salida de Iquique, pasa por Diamante, Provenza, Autopista, Centro y retorna.',
+          'Sale de Iquique (Floridablanca), sube por el Diamante, pasa por Provenza, '
+          'toma la Autopista hasta Terminal Sur, sube al Centro por la Cra. 15.',
       frequency: 'Cada 10 min',
       schedule: '04:45 AM - 09:30 PM',
-      lengthKm: 18.5,
-      neighborhoods: ['Iquique', 'Provenza', 'Diamante'],
-      color: '#2E7D32', // Verde
+      lengthKm: 20.3,
+      neighborhoods: [
+        'Iquique',
+        'Diamante',
+        'Provenza',
+        'Lagos del Cacique',
+        'Terminal Sur',
+        'Centro Bucaramanga',
+      ],
+      color: '#2E7D32',
       coordinates: [
-        LatLngEntity(lat: 7.0850, lng: -73.1100), // Iquique
-        LatLngEntity(lat: 7.0950, lng: -73.1150), // Provenza
-        LatLngEntity(lat: 7.1050, lng: -73.1200), // Viaducto
-        LatLngEntity(lat: 7.1250, lng: -73.1250), // Centro
+        LatLngEntity(lat: 7.0630, lng: -73.0870), // Iquique / Floridablanca
+        LatLngEntity(lat: 7.0700, lng: -73.0940), // Diamante
+        LatLngEntity(lat: 7.0780, lng: -73.1010), // El Reposo
+        LatLngEntity(lat: 7.0850, lng: -73.1060), // Provenza
+        LatLngEntity(lat: 7.0885, lng: -73.1097), // Lagos del Cacique
+        LatLngEntity(lat: 7.0930, lng: -73.1195), // Terminal Sur
+        LatLngEntity(lat: 7.1000, lng: -73.1200), // Parque García Rovira
+        LatLngEntity(lat: 7.1080, lng: -73.1210), // Parque Santander
       ],
       stops: [
         StopEntity(
           id: 'cot1',
           name: 'Despacho Iquique',
-          lat: 7.0850,
-          lng: -73.1100,
-          address: 'Iquique Sur',
+          lat: 7.0630,
+          lng: -73.0870,
+          address: 'Floridablanca – Iquique Sur',
         ),
         StopEntity(
           id: 'cot2',
-          name: 'Puente Provenza',
-          lat: 7.0950,
-          lng: -73.1150,
-          address: 'Autopista a Floridablanca',
+          name: 'El Diamante',
+          lat: 7.0700,
+          lng: -73.0940,
+          address: 'Barrio El Diamante, Floridablanca',
         ),
         StopEntity(
           id: 'cot3',
-          name: 'Centro / Alcaldía',
-          lat: 7.1250,
-          lng: -73.1250,
-          address: 'Calle 35',
+          name: 'El Reposo',
+          lat: 7.0780,
+          lng: -73.1010,
+          address: 'Urbanización El Reposo',
+        ),
+        StopEntity(
+          id: 'cot4',
+          name: 'Provenza – Autopista',
+          lat: 7.0850,
+          lng: -73.1060,
+          address: 'Autopista Floridablanca km 6',
+        ),
+        StopEntity(
+          id: 'cot5',
+          name: 'C.C. Lagos del Cacique',
+          lat: 7.0885,
+          lng: -73.1097,
+          address: 'Autopista km 7, Bucaramanga',
+        ),
+        StopEntity(
+          id: 'cot6',
+          name: 'Terminal Sur',
+          lat: 7.0930,
+          lng: -73.1195,
+          address: 'Terminal de Transportes, Cra. 15',
+        ),
+        StopEntity(
+          id: 'cot7',
+          name: 'Parque García Rovira',
+          lat: 7.1000,
+          lng: -73.1200,
+          address: 'Centro, Bucaramanga',
+        ),
+        StopEntity(
+          id: 'cot8',
+          name: 'Parque Santander',
+          lat: 7.1080,
+          lng: -73.1210,
+          address: 'Centro Histórico, Bucaramanga',
         ),
       ],
     ),

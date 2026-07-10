@@ -13,9 +13,10 @@ class AppConstants {
   static const double ambDetailZoom = 16.0;
 
   // Radio de búsqueda de paradas (metros)
+  // Nota: los datos mock tienen pocas paradas, se usa 4000m en el provider
   static const int defaultSearchRadiusMeters = 500;
   static const int minSearchRadiusMeters = 200;
-  static const int maxSearchRadiusMeters = 2000;
+  static const int maxSearchRadiusMeters = 5000;
 
   // Velocidad media del bus (km/h) para estimación de tiempo
   static const double avgBusSpeedKmh = 22.0;

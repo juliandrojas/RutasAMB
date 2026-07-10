@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "ecc.install.v1",
+  "installedAt": "2026-07-10T18:46:25.496Z",
+  "target": {
+    "id": "antigravity-project",
+    "target": "antigravity",
+    "kind": "project",
+    "root": "C:\\Julian\\ECC\\.agent",
+    "installStatePath": "C:\\Julian\\ECC\\.agent\\ecc-install-state.json"
+  },
+  "request": {
+    "profile": null,
+    "modules": [],
+    "includeComponents": [
+      "skill:dart-flutter-patterns",
+      "skill:flutter-dart-code-review"
+    ],
+    "excludeComponents": [],
+    "legacyLanguages": [],
+    "legacyMode": false
+  },
+  "resolution": {
+    "selectedModules": [
+      "skill-dart-flutter-patterns",
+      "skill-flutter-dart-code-review"
+    ],
+    "skippedModules": []
+  },
+  "source": {
+    "repoVersion": "2.0.0",
+    "repoCommit": "40927950c49f6e742d341e20ff7b9b7e1e7bfff5",
+    "manifestVersion": 1
+  },
+  "operations": [
+    {
+      "kind": "copy-file",
+      "moduleId": "skill-dart-flutter-patterns",
+      "sourcePath": "C:\\Julian\\ECC\\skills\\dart-flutter-patterns\\SKILL.md",
+      "sourceRelativePath": "skills\\dart-flutter-patterns\\SKILL.md",
+      "destinationPath": "C:\\Julian\\ECC\\.agent\\skills\\dart-flutter-patterns\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "skill-flutter-dart-code-review",
+      "sourcePath": "C:\\Julian\\ECC\\skills\\flutter-dart-code-review\\SKILL.md",
+      "sourceRelativePath": "skills\\flutter-dart-code-review\\SKILL.md",
+      "destinationPath": "C:\\Julian\\ECC\\.agent\\skills\\flutter-dart-code-review\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    }
+  ]
+}
