@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../widgets/company_filter_section.dart';
+
 final _themeModeProvider = StateNotifierProvider<_ThemeModeNotifier, ThemeMode>(
   (ref) => _ThemeModeNotifier(),
 );
@@ -94,6 +96,10 @@ class SettingsScreen extends ConsumerWidget {
               ],
             ),
           ),
+
+          // ── Sección: Empresas de Transporte ───────────────────────
+          _SectionHeader(title: 'Empresas de Transporte'),
+          const CompanyFilterSection(),
 
           // ── Sección: Acerca de ──────────────────────────────────────
           _SectionHeader(title: 'Acerca de'),
